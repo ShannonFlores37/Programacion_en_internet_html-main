@@ -22,11 +22,11 @@ function conversor(numeroIngresado, seleccion)
 {
 if(seleccion === "value1")
 {
-    document.getElementById('resultado').innerHTML = (numeroIngresado * 9 / 5) + 32
+    document.getElementById('resultado').innerHTML = ((numeroIngresado * 9 / 5) + 32)+("F°")
 
 }
 else  if(seleccion === "value2")
 {
-     document.getElementById('resultado').innerHTML = (numeroIngresado - 32) * 5 / 9
+     document.getElementById('resultado').innerHTML = ((numeroIngresado - 32) * 5 / 9)+("C°")
 }
 }
