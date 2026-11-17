@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Posiciones en HTML</title>
+  <link rel="stylesheet" href="estilos.css">
+
+  <!-- estilos solo para esta práctica -->
+  <style>
+    /* cajas de los ejemplos */
+    .caja-naranja {
+      background: orange;
+      width: 100px;
+      height: 100px;
+    }
+    .caja-azul {
+      background: lightskyblue;
+      width: 100px;
+      height: 100px;
+    }
+
+    /* 1. static */
+    .static-azul {
+      position: static;
+    }
+
+    /* 2. relative */
+    .relative-naranja {
+      position: relative;
+      top: 20px;
+      left: 100px;
+    }
+
+    /* 3. absolute */
+    .contenedor {
+      position: relative;
+      background: lightgray;
+      height: 200px;
+    }
+    .absolute-naranja {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+
+    /* 4. fixed */
+    .fixed-naranja {
+      position: fixed;
+      right: 5px;
+      bottom: 5px;
+      width: 100px;
+      height: 100px;
+      background: orange;
+      z-index: 10;
+    }
+
+    /* 5. sticky */
+    .contenedor-sticky {
+      background: #dddddd;
+      height: 500px;
+    }
+    .sticky-azul {
+      position: sticky;
+      top: 0;
+      background: lightskyblue;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="fondo.jpg" alt="Fondo de encabezado">
+  </header>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="#">Conocerme</a>
+
+        <ul>
+          <li><a href="informacion.html">Información personal</a></li>
+          <li><a href="pasatiempos.html">Pasatiempos</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Segundo parcial</a>
+        <ul>
+          <li> <a href="posiciones.html"> Posiciones en HTML</a> </li>
+        </ul>
+      </li>
+      <li><a href="#">Tercer parcial</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <aside class="principal">
+      <h2>POSICIONES EN CSS</h2>
+      <p>En esta práctica pruebo los 5 valores de la propiedad <b>position</b>: static, relative, absolute, fixed y sticky.</p>
+
+      <h3>1. Static</h3>
+      <p>Es el valor por defecto, la caja se queda en su lugar normal de la página.</p>
+      <div class="caja-naranja"></div>
+      <div class="caja-azul static-azul"></div>
+
+      <h3>2. Relative</h3>
+      <p>La caja naranja se mueve respecto a donde le tocaba estar (20px abajo y 100px a la derecha).</p>
+      <div class="caja-naranja relative-naranja"></div>
+      <div class="caja-azul"></div>
+
+      <h3>3. Absolute</h3>
+      <p>La caja naranja sale del flujo normal y se coloca respecto a su contenedor (el gris), arriba a la derecha.</p>
+      <div class="contenedor">
+        <div class="caja-naranja absolute-naranja"></div>
+        <div class="caja-azul"></div>
+      </div>
+
+      <h3>4. Fixed</h3>
+      <p>La caja naranja de la esquina de abajo a la derecha de la pantalla es fixed, aunque se haga scroll no se mueve.</p>
+      <div class="fixed-naranja">fixed</div>
+
+      <h3>5. Sticky</h3>
+      <p>La barra azul se mueve con el scroll y cuando llega hasta arriba se queda pegada.</p>
+      <div class="contenedor-sticky">
+        <div class="sticky-azul">Soy sticky, baja la página para verme</div>
+        <p>Texto de relleno para poder hacer scroll dentro del contenedor.</p>
+        <p>Texto de relleno para poder hacer scroll dentro del contenedor.</p>
+        <p>Texto de relleno para poder hacer scroll dentro del contenedor.</p>
+        <p>Texto de relleno para poder hacer scroll dentro del contenedor.</p>
+        <p>Texto de relleno para poder hacer scroll dentro del contenedor.</p>
+        <p>Texto de relleno para poder hacer scroll dentro del contenedor.</p>
+        <p>Texto de relleno para poder hacer scroll dentro del contenedor.</p>
+      </div>
+    </aside>
+
+    <aside class="secundario">
+      <h3>Resumen</h3>
+      <ul>
+        <li><b>static:</b> posición normal</li>
+        <li><b>relative:</b> se mueve respecto a su lugar</li>
+        <li><b>absolute:</b> respecto al padre</li>
+        <li><b>fixed:</b> respecto a la pantalla</li>
+        <li><b>sticky:</b> mezcla de relative y fixed</li>
+      </ul>
+      <p>Fuente: artículo de freeCodeCamp "Cómo usar la propiedad de posición en CSS para alinear elementos".</p>
+    </aside>
+  </section>
+
+  <footer>
+    <img src="logo_ucol.jpg" alt="Logo Ucol">
+    <div>
+      <p><strong>Universidad de Colima</strong></p>
+      <p>Bachillerato 8</p>
+      <p>Programación en internet I</p>
+    </div>
+  </footer>
+</body>
+</html>
