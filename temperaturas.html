@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de temperaturas</title>
+  <meta charset="UTF-8">
+  <title>Mi sitio web</title>
+  <!-- Símbolo de cierre > agregado al final -->
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Conversor de temperaturas</h1>
+  <header>
+    <img src="fondo.jpg" alt="Fondo de encabezado">
+  </header>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="#">Conocerme</a>
+        
+        <!--primera seccion-->
+        <ul>
+          <li><a href="informacion.html">Información personal</a></li>
+          <li><a href="pasatiempos.html">Pasatiempos</a></li>
+        </ul>
+        <!--segundo parcial-->
+        <li>
+        <a href="#">Segundo parcial</a>
+        <ul>
+         
+          <li><a href="posiciones.html">Posiciones</a></li>
+          <li><a href="mundodigital.html">Mi mundo digital</a></li>
+          <li> <a href="practica_posiciones.html"> practica de posiciones</a> </li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+        </ul>
+        </li>
+        <!--tercer parcial-->
+        <li>
+        <a href="#">Tercer parcial</a>
+        <ul>
+          <li><a href="edad.html">Verificar edad</a></li>
+          <li><a href="temperaturas.html"> Conversor de temperaturas </a></li>
+        </ul>
+        </li>
+    </ul>
+  </nav>
+  <section>
+     <h1>Conversor de temperaturas</h1>
      <!--aqui va a ir la lista desplegable-->
    <label for "select"> ¿Que tipo de conversión quieres hacer?</label>
    <select name="select" id="select" required> <!--pongo el required para que sea obligatorio -->
@@ -25,8 +62,25 @@
    <input type="button" name="boton" id="boton" value = "Convertir"/>
 
    <!--el espacio para el resultado-->
+   <label for "temperatura">Temperatura ingresada:</label>
+   <p id="temperatura"></p>
+   <label for "tipo">Tipo de conversión:</label>
+   <p id="Tipo"></p>
+   <label for "resultado">Resultado:</label>
    <p id="resultado"></p>
 
+
+  </section>
+  <footer> 
+<img src="logo_ucol.jpg">
+<div>
+<p> <strong> Universidad de colima </strong></p>
+<p>Bachillerasto 8</p>
+<p>Programcion en internet I</p>
+
+</div>
+
+  </footer>
+  <script src ="temperaturas.js"></script>
 </body>
-<script src ="temperaturas.js"></script>
 </html>

@@ -22,11 +22,15 @@ function conversor(numeroIngresado, seleccion)
 {
 if(seleccion === "value1")
 {
+    document.getElementById('temperatura').innerHTML = numeroIngresado+("C°")
+    document.getElementById('tipo').innerHTML = "Celcius a Farenheit"
     document.getElementById('resultado').innerHTML = ((numeroIngresado * 9 / 5) + 32)+("F°")
 
 }
 else  if(seleccion === "value2")
 {
+     document.getElementById('temperatura').innerHTML = numeroIngresado+("F°")
+      document.getElementById('tipo').innerHTML = "Farenheit a Celcius"
      document.getElementById('resultado').innerHTML = ((numeroIngresado - 32) * 5 / 9)+("C°")
 }
 }
