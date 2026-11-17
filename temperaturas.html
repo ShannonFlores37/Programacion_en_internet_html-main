@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperaturas</title>
+</head>
+<body>
+    <h1>Conversor de temperaturas</h1>
+     <!--aqui va a ir la lista desplegable-->
+   <label for "select"> ¿Que tipo de conversión quieres hacer?</label>
+   <select name="select" id="select" required> <!--pongo el required para que sea obligatorio -->
+        <option selected = "selected" disabled="disabled" value=""> Selecciona uno</option> <!--no entiendo muy bien que hace jjsjs-->
+        <option value="value1">Celcius a Farenheit</option>
+        <option value="value2">Farenheit a Celcius</option>
+   </select>
+   <br><br>
+
+   <label for "numero"> Ingresa la temperatura: </label>
+   <input type="number" id="numero" name="numero"> </input><!--imput de el numero-->
+
+  
+
+   <!--el input de el boton-->
+   <input type="button" name="boton" id="boton" value = "Convertir"/>
+
+   <!--el espacio para el resultado-->
+   <p id="resultado"></p>
+
+</body>
+<script src ="temperaturas.js"></script>
+</html>
